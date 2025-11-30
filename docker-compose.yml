@@ -1,0 +1,11 @@
+services:
+  kasa-api:
+    image: kasa-api
+    build: .
+    container_name: kasa-api
+    environment:
+      - TZ=America/Chicago
+      - API_KEY=supersecret123
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
